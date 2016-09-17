@@ -16,6 +16,8 @@ namespace trigger {
 
 			if (!init())
 				glfwTerminate();
+
+			
 		}
 
 		Window::~Window() { 
@@ -53,7 +55,7 @@ namespace trigger {
 		{
 			if (!glfwInit())
 			{
-				std::cout << "Failed to initialize...";
+				std::cout << "Failed to initialize..." << std::endl;
 				return false;
 			}
 
@@ -66,9 +68,18 @@ namespace trigger {
 			}
 			glfwMakeContextCurrent(m_Window);
 			glfwSetWindowSizeCallback(m_Window, windowResize);
+
+			std::cout << "GL: " << glGetString(GL_VERSION);
+
+			if (glewInit() != GLEW_OK)
+			{
+				std::cout << "Failure to initialize GLEW..." << std::endl;
+				return false;
+			}
 			return true;
 
 		}
+
 
 
 	}
