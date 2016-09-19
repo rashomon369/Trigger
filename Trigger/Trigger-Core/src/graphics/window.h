@@ -6,6 +6,9 @@ namespace trigger {
 
 	namespace graphics
 	{
+#define MAX_KEYS 1024
+#define MAX_BUTTONS 32
+
 		class Window
 		{
 		private:
@@ -13,6 +16,11 @@ namespace trigger {
 			const char *m_Name;
 			GLFWwindow *m_Window;
 			bool m_closed;
+
+			static bool m_Keys[MAX_KEYS];
+			static bool m_MouseButtons[MAX_BUTTONS];
+			static double mx, my;
+
 
 		public:
 
