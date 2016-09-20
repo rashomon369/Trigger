@@ -53,5 +53,26 @@ namespace trigger {
 
 		}
 
+		vector2 &operator+(vector2 &left, const vector2 &right)
+		{
+
+			return left.add(right);
+		}
+		vector2 &operator-(vector2 &left, const vector2 &right)
+		{
+
+			return left.subtract(right);
+		}
+		vector2 &operator*(vector2 &left, const vector2 &right)
+		{
+
+			return left.multiply(right);
+		}
+		vector2 &operator/(vector2 &left, const vector2 &right)
+		{
+
+			return left.divide(right);
+		}
+
 	}
 }

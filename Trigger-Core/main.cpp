@@ -16,14 +16,15 @@ int main()
 	glBindVertexArray(vao);
 
 	vector2 vec(1.2, 3.5);
+	vector2 vec2(2.0f, 3.0f);
 
-
+	vector2 c = vec / vec2;
 	while (!window.closed())
 	{
 		
 		window.clear();
 
-		std::cout << vec;
+		std::cout << c;
 
 		if (window.isKeyPressed(GLFW_KEY_A))
 		{

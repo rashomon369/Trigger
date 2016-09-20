@@ -19,11 +19,16 @@ namespace trigger
 			vector2& multiply(const vector2& other);
 			vector2& divide(const vector2& other);
 
+			friend vector2 &operator+(vector2 &left, const vector2 &right);
+			friend vector2 &operator-(vector2 &left, const vector2 &right);
+			friend vector2 &operator*(vector2 &left, const vector2 &right);
+			friend vector2 &operator/(vector2 &left, const vector2 &right);
+			friend std::ostream &operator<<(std::ostream &stream, const vector2 &vector);
+
 
 		};
 
-		std::ostream &operator<<(std::ostream &stream, const vector2 &vector);
-
+		
 
 }
 }
