@@ -1,6 +1,6 @@
 
 #include "src/graphics/window.h"
-#include "src\math\vector2.h"
+#include "src\math\maths.h"
 
 int main()
 {
@@ -15,16 +15,22 @@ int main()
 	glGenVertexArrays(1, &vao);
 	glBindVertexArray(vao);
 
-	vector2 vec(1.2, 3.5);
-	vector2 vec2(2.0f, 3.0f);
+	vector2 vec(2, 3);
+	vector2 vec2(2.1f, 3.0f);
+	vector3 vec3(2, 4, 3);
+	vector3 vec4(2, 4, 3);
+	vector4 vec5(2, 4, 3, 6);
+	vector4 vec6(2, 4, 3, 6);
 
-	vector2 c = vec / vec2;
+	vector2 v = vec + vec2;
+	
 	while (!window.closed())
 	{
 		
 		window.clear();
 
-		std::cout << c;
+		
+			std::cout << vec << std::endl;
 
 		if (window.isKeyPressed(GLFW_KEY_A))
 		{
