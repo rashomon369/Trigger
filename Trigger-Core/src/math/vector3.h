@@ -19,10 +19,10 @@ namespace trigger
 			vector3& multiply(const vector3& other);
 			vector3& divide(const vector3& other);
 
-			friend vector3 &operator+(vector3 left, const vector3 &right);
-			friend vector3 &operator-(vector3 left, const vector3 &right);
-			friend vector3 &operator*(vector3 left, const vector3 &right);
-			friend vector3 &operator/(vector3 left, const vector3 &right);
+			friend vector3 operator+(vector3 left, const vector3 &right);
+			friend vector3 operator-(vector3 left, const vector3 &right);
+			friend vector3 operator*(vector3 left, const vector3 &right);
+			friend vector3 operator/(vector3 left, const vector3 &right);
 
 			friend const bool &operator==(const vector3 &left, const vector3 &right);
 			bool operator!=(const vector3 &other);

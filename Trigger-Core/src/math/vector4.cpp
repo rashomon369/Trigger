@@ -65,22 +65,22 @@ namespace trigger {
 
 		}
 
-		vector4 &operator+(vector4 left, const vector4 &right)
+		vector4 operator+(vector4 left, const vector4 &right)
 		{
 
 			return left.add(right);
 		}
-		vector4 &operator-(vector4 left, const vector4 &right)
+		vector4 operator-(vector4 left, const vector4 &right)
 		{
 
 			return left.subtract(right);
 		}
-		vector4 &operator*(vector4 left, const vector4 &right)
+		vector4 operator*(vector4 left, const vector4 &right)
 		{
 
 			return left.multiply(right);
 		}
-		vector4 &operator/(vector4 left, const vector4 &right)
+		vector4 operator/(vector4 left, const vector4 &right)
 		{
 
 			return left.divide(right);
